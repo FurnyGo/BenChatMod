@@ -1,0 +1,34 @@
+[22:34:44] [main/INFO] (FabricLoader/GameProvider) Loading for game Minecraft 1.18
+[22:34:44] [main/DEBUG] (FabricLoader/GameRemap) Requesting deobfuscation of [C:\Users\Королева\.gradle\caches\fabric-loom\1.18-mapped-net.fabricmc.yarn-1.18+build.1-v2\minecraft-1.18-mapped-net.fabricmc.yarn-1.18+build.1-v2.jar]
+[22:34:44] [main/DEBUG] (FabricLoader/GamePatch) Found game constructor: net.minecraft.client.main.Main -> net.minecraft.client.MinecraftClient
+[22:34:44] [main/DEBUG] (FabricLoader/GamePatch) Patching game constructor <init>(Lnet/minecraft/client/RunArgs;)V
+[22:34:44] [main/DEBUG] (FabricLoader/GamePatch) Run directory field is thought to be net/minecraft/client/MinecraftClient/runDirectory
+[22:34:44] [main/DEBUG] (FabricLoader/GamePatch) Applying brand name hook to net/minecraft/client/ClientBrandRetriever::getClientModName
+[22:34:44] [main/DEBUG] (FabricLoader/GamePatch) Applying brand name hook to net/minecraft/server/MinecraftServer::getServerModName
+[22:34:44] [main/DEBUG] (FabricLoader/GamePatch) Patched 3 classs
+[22:34:44] [main/DEBUG] (FabricLoader/Discovery) Mod discovery time: 24,3 ms
+[22:34:44] [main/WARN] (FabricLoader/Resolution) Mod resolution failed
+[22:34:44] [main/INFO] (FabricLoader/Resolution) Immediate reason: [HARD_DEP_NO_CANDIDATE chat-utils 1.4.0 {depends fabric @ [*]}, ROOT_FORCELOAD_SINGLE chat-utils 1.4.0]
+[22:34:44] [main/INFO] (FabricLoader/Resolution) Reason: [HARD_DEP chat-utils 1.4.0 {depends fabric @ [*]}]
+[22:34:44] [main/INFO] (FabricLoader/Resolution) Fix: add [add:fabric 1 ([(-?,?)])], remove [], replace []
+[22:34:44] [main/ERROR] (FabricLoader) Incompatible mod set!
+net.fabricmc.loader.impl.FormattedException: net.fabricmc.loader.impl.discovery.ModResolutionException: Mod resolution encountered an incompatible mod set!
+A potential solution has been determined:
+	 - Install fabric, any version.
+Unmet dependency listing:
+	 - Mod 'Chat Utils Mod' (chat-utils) 1.4.0 requires any version of fabric, which is missing!
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:188) ~[fabric-loader-0.12.8.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.init(Knot.java:142) ~[fabric-loader-0.12.8.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:71) [fabric-loader-0.12.8.jar:?]
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23) [fabric-loader-0.12.8.jar:?]
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86) [dev-launch-injector-0.2.1+build.8.jar:?]
+Caused by: net.fabricmc.loader.impl.discovery.ModResolutionException: Mod resolution encountered an incompatible mod set!
+A potential solution has been determined:
+	 - Install fabric, any version.
+Unmet dependency listing:
+	 - Mod 'Chat Utils Mod' (chat-utils) 1.4.0 requires any version of fabric, which is missing!
+	at net.fabricmc.loader.impl.discovery.ModResolver.findCompatibleSet(ModResolver.java:183) ~[fabric-loader-0.12.8.jar:?]
+	at net.fabricmc.loader.impl.discovery.ModResolver.resolve(ModResolver.java:48) ~[fabric-loader-0.12.8.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.setup(FabricLoaderImpl.java:222) ~[fabric-loader-0.12.8.jar:?]
+	at net.fabricmc.loader.impl.FabricLoaderImpl.load(FabricLoaderImpl.java:186) ~[fabric-loader-0.12.8.jar:?]
+	... 4 more

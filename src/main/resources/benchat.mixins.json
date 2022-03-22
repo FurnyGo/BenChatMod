@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "furnygo.benchat.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [],
+  "client": [
+    "CopyToClipboardMixin",
+    "ReceiveMessageMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
