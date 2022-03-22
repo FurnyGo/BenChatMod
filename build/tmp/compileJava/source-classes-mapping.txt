@@ -1,10 +1,10 @@
+furnygo/benchat/BenChatConfig.java
+ furnygo.benchat.BenChatConfig
+ furnygo.benchat.BenChatConfig$Value
 furnygo/benchat/ModMenuApiImpl.java
  furnygo.benchat.ModMenuApiImpl
 furnygo/benchat/ConfigGui.java
  furnygo.benchat.ConfigGui
-furnygo/benchat/ChatUtilsConfig.java
- furnygo.benchat.ChatUtilsConfig
- furnygo.benchat.ChatUtilsConfig$Value
 net/md_5/bungee/api/ChatColor.java
  net.md_5.bungee.api.ChatColor
 furnygo/benchat/mixin/ReceiveMessageMixin.java

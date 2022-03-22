@@ -8,7 +8,7 @@ public class BenChatMod implements ModInitializer {
     public void onInitialize() {
         // To prevent HeadlessExceptions when copying to clipboard.
         System.setProperty("java.awt.headless", "false");
-        ChatUtilsConfig.loadFromFile();
+        BenChatConfig.loadFromFile();
         LogManager.getLogger().info("§aBen activated!");
     }
 }

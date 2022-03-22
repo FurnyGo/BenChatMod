@@ -2,7 +2,7 @@ package furnygo.benchat.mixin;
 
 import fi.dy.masa.malilib.config.options.ConfigBoolean;
 import fi.dy.masa.malilib.config.options.ConfigString;
-import furnygo.benchat.ChatUtilsConfig;
+import furnygo.benchat.BenChatConfig;
 import net.md_5.bungee.api.ChatColor;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.ChatHud;
@@ -15,11 +15,10 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 @Mixin(ChatHud.class)
 public class ReceiveMessageMixin {
-
     @Inject(method = "addMessage(Lnet/minecraft/text/Text;I)V", at = @At("HEAD"))
     public void addMessage(Text text, int messageId, CallbackInfo info) {
-        if (((ConfigBoolean) ChatUtilsConfig.OPTIONS.get(5)).getBooleanValue()) {
-            if (text.getString().startsWith(((ConfigBoolean) ChatUtilsConfig.OPTIONS.get(6)).getStringValue())) {
+        if (((ConfigBoolean) BenChatConfig.OPTIONS.get(5)).getBooleanValue()) {
+            if (text.getString().startsWith(((ConfigString) BenChatConfig.OPTIONS.get(6)).getStringValue())) {
              //   System.out.println("get global");
                 if (text.getString().toLowerCase().contains("бен") || text.getString().toLowerCase().contains("бэн") || text.getString().toLowerCase().contains("ben")) {
                     String randc1 = RandomStringUtils.randomAlphabetic(6); String randc2 = RandomStringUtils.randomNumeric(6); String random = randc1 + randc2;
@@ -32,8 +31,8 @@ public class ReceiveMessageMixin {
                 }
             }
         }
-        if (((ConfigBoolean) ChatUtilsConfig.OPTIONS.get(7)).getBooleanValue()) {
-            if (text.getString().startsWith(((ConfigBoolean) ChatUtilsConfig.OPTIONS.get(8)).getStringValue())) {
+        if (((ConfigBoolean) BenChatConfig.OPTIONS.get(7)).getBooleanValue()) {
+            if (text.getString().startsWith(((ConfigString) BenChatConfig.OPTIONS.get(8)).getStringValue())) {
                // System.out.println("get local");
                 if (text.getString().toLowerCase().contains("бен") || text.getString().toLowerCase().contains("бэн") || text.getString().toLowerCase().contains("ben")) {
                     String randc1 = RandomStringUtils.randomAlphabetic(6); String randc2 = RandomStringUtils.randomNumeric(6); String random = randc1 + randc2;
@@ -46,8 +45,8 @@ public class ReceiveMessageMixin {
                 }
             }
         }
-        if (((ConfigBoolean) ChatUtilsConfig.OPTIONS.get(9)).getBooleanValue()) {
-            if (text.getString().toLowerCase().startsWith(((ConfigBoolean) ChatUtilsConfig.OPTIONS.get(10)).getStringValue())) {
+        if (((ConfigBoolean) BenChatConfig.OPTIONS.get(9)).getBooleanValue()) {
+            if (text.getString().toLowerCase().startsWith(((ConfigString) BenChatConfig.OPTIONS.get(10)).getStringValue())) {
                // System.out.println("get clan");
                 if (text.getString().toLowerCase().contains("бен") || text.getString().toLowerCase().contains("бэн") || text.getString().toLowerCase().contains("ben")) {
                     String randc1 = RandomStringUtils.randomAlphabetic(6); String randc2 = RandomStringUtils.randomNumeric(6); String random = randc1 + randc2;
@@ -62,27 +61,27 @@ public class ReceiveMessageMixin {
         }
         String tooltip;
         String toCopy = text.getString();
-        if (!((ConfigBoolean) ChatUtilsConfig.OPTIONS.get(2)).getBooleanValue()) {
+        if (!((ConfigBoolean) BenChatConfig.OPTIONS.get(2)).getBooleanValue()) {
             toCopy = ChatColor.stripColor(toCopy);
         }
 
-        if (((ConfigBoolean) ChatUtilsConfig.OPTIONS.get(1)).getBooleanValue()) {
+        if (((ConfigBoolean) BenChatConfig.OPTIONS.get(1)).getBooleanValue()) {
             tooltip = ChatColor.translateAlternateColorCodes('&',
-                    ((ConfigString) ChatUtilsConfig.OPTIONS.get(0)).getStringValue() + "\n\n&9Preview:\n&f" +
+                    ((ConfigString) BenChatConfig.OPTIONS.get(0)).getStringValue() + "\n\n&9Preview:\n&f" +
                             toCopy);
         } else {
             tooltip = ChatColor.translateAlternateColorCodes('&',
-                    ((ConfigString) ChatUtilsConfig.OPTIONS.get(0)).getStringValue());
+                    ((ConfigString) BenChatConfig.OPTIONS.get(0)).getStringValue());
         }
 
         Style style = text.getStyle()
                 .withClickEvent(new ClickEvent(ClickEvent.Action.RUN_COMMAND, "/clipboard " + toCopy));
-        if (((ConfigBoolean) ChatUtilsConfig.OPTIONS.get(3)).getBooleanValue()) {
+        if (((ConfigBoolean) BenChatConfig.OPTIONS.get(3)).getBooleanValue()) {
             style = style.withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,
                     new LiteralText(tooltip)));
         }
 
-        if (text.getStyle().getClickEvent() == null && ((ConfigBoolean) ChatUtilsConfig.OPTIONS.get(4)).getBooleanValue()) {
+        if (text.getStyle().getClickEvent() == null && ((ConfigBoolean) BenChatConfig.OPTIONS.get(4)).getBooleanValue()) {
             ((MutableText) text).setStyle(style);
         }
     }

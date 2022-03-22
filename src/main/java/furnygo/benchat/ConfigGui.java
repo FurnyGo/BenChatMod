@@ -12,14 +12,14 @@ public class ConfigGui extends GuiConfigsBase {
 
     @Override
     public List<ConfigOptionWrapper> getConfigs() {
-        return ConfigOptionWrapper.createFor(ChatUtilsConfig.OPTIONS);
+        return ConfigOptionWrapper.createFor(BenChatConfig.OPTIONS);
     }
 
     @Override
     protected void onSettingsChanged() {
         super.onSettingsChanged();
-        ChatUtilsConfig.saveToFile();
-        ChatUtilsConfig.loadFromFile();
+        BenChatConfig.saveToFile();
+        BenChatConfig.loadFromFile();
         LogManager.getLogger().info("Настройки сохранены.");
     }
 }
