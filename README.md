@@ -28,3 +28,5 @@ BenChatMod - Чатбот для серверов майнкрафта (Толь
 Press ESC, go to modmenu menu, choose this mod and press on settings button. Enjoy!
 ## RU
 Нажмите ESC, перейдите в меню modmenu, выберите этот мод и нажмите кнопку настройки. Заходите на сервер и развлекайтесь
+
+### TODO: Translatable answers, delete copy function (for compatibility)
