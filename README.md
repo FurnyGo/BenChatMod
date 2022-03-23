@@ -1,4 +1,4 @@
-# BenChatMod
+# BenChatMod (Talking Ben)
 ![image](https://user-images.githubusercontent.com/68079109/159576356-e4f35a3b-6777-4db6-a91f-057c8c74af88.png)
 ## EN  
 BenChatMod - ChatBot for minecraft servers (client-side)  
