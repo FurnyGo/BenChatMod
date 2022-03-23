@@ -4,11 +4,11 @@
 BenChatMod - ChatBot for minecraft servers (client-side)  
 This mod has copy, anti-anti-spam, different chat channels functions:  
 ![image](https://user-images.githubusercontent.com/68079109/159686732-1883623f-8a38-4313-a6db-10d7968b9bcd.png)  
-Original author of 80% code - https://github.com/HotLava03/chat-utils
+Original author of 50% code - https://github.com/HotLava03/chat-utils
 ## RU  
 BenChatMod - Чатбот для серверов майнкрафта (Только для клиента)  
 Мод имеет функции копирования сообщений, защита от анти-спама и разные каналы отправки (Скрин выше)  
-Оригинальный автор 80% кода - https://github.com/HotLava03/chat-utils
+Оригинальный автор 50% кода - https://github.com/HotLava03/chat-utils
 # How to install (Как установить)
 ## EN
 - Go to the releases page for this repository and choose the latest stable release.
