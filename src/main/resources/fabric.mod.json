@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
   "id": "benchat",
-  "version": "1.0.0",
+  "version": "1.1.0",
 
   "name": "BenChat",
-  "description": "Ben in minecraft chat bot",
+  "description": "§lBen in minecraft chat bot",
   "authors": [
-    "original: HotLava03","modified to ben by FurnyGo"
+    "§eoriginal: §lHotLava03","§emodified to ben by §lFurnyGo"
   ],
   "contact": {
     "homepage": "https://youtube.com/FurnyGo",
-    "sources": "https://github.com/HotLava03/chat-utils"
+    "sources": "https://github.com/FurnyGo/BenChatMod"
   },
 
   "license": "GPLv3",
-  "icon": "assets/benchat/icon.png",
+  "icon": "assets/benchat/icon.jpg",
 
   "environment": "*",
   "entrypoints": {

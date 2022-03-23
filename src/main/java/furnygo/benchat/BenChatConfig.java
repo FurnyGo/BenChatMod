@@ -24,11 +24,14 @@ public class BenChatConfig implements IConfigHandler {
                 new ConfigBoolean("tooltipEnabled", Value.TOOLTIP_ENABLED.getAsBoolean(), "Click to disable any sort of overlay when hovering a message."),
                 new ConfigBoolean("enabled", Value.ENABLED.getAsBoolean(), "Enable?"),
                 new ConfigBoolean("globalChat", Value.GLOBAL_MODE.getAsBoolean(), "Global chat"),
-                new ConfigString("globalChatprefix", Value.GLOBAL_PREFIX.getAsString(), "Clan chat prefix"),
+                new ConfigString("globalChatPrefix", Value.GLOBAL_PREFIX.getAsString(), "Clan chat prefix"),
                 new ConfigBoolean("localChat", Value.LOCAL_MODE.getAsBoolean(), "Local chat"),
-                new ConfigString("localChatprefix", Value.LOCAL_PREFIX.getAsString(), "Clan chat prefix"),
+                new ConfigString("localChatPrefix", Value.LOCAL_PREFIX.getAsString(), "Clan chat prefix"),
                 new ConfigBoolean("clanChat", Value.CLAN_MODE.getAsBoolean(), "Clan chat"),
-                new ConfigString("clanChatprefix", Value.CLAN_PREFIX.getAsString(), "Clan chat prefix")
+                new ConfigString("clanChatPrefix", Value.CLAN_PREFIX.getAsString(), "Clan chat prefix"),
+                new ConfigBoolean("privateChat", Value.PRIVATE_MODE.getAsBoolean(), "Private chat"),
+                new ConfigString("privateChatPrefix", Value.PRIVATE_PREFIX.getAsString(), "Private chat prefix"),
+                new ConfigString("privateChatArrow", Value.PRIVATE_ARROW.getAsString(), "Private chat arrow")
         );
     }
 
@@ -85,7 +88,10 @@ public class BenChatConfig implements IConfigHandler {
         LOCAL_MODE("true"),
         LOCAL_PREFIX("[ʟ]"),
         CLAN_MODE("true"),
-        CLAN_PREFIX("клан:");
+        CLAN_PREFIX("клан:"),
+        PRIVATE_MODE("true"),
+        PRIVATE_PREFIX("| ["),
+        PRIVATE_ARROW("->");
 
 
         private final String value;
