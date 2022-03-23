@@ -19,8 +19,11 @@ public class ReceiveMessageMixin {
     public void addMessage(Text text, int messageId, CallbackInfo info) {
         if (((ConfigBoolean) BenChatConfig.OPTIONS.get(5)).getBooleanValue()) {
             if (text.getString().startsWith(((ConfigString) BenChatConfig.OPTIONS.get(6)).getStringValue())) {
+                if (text.getString().toLowerCase().contains("~бен") || text.getString().toLowerCase().contains("~бэн") || text.getString().toLowerCase().contains("~ben")) {
+                    return;
+                }
              // System.out.println("get global");
-                if (text.getString().toLowerCase().contains("бен") || text.getString().toLowerCase().contains("бэн") || text.getString().toLowerCase().contains("ben")) {
+                else if (text.getString().toLowerCase().contains("бен") || text.getString().toLowerCase().contains("бэн") || text.getString().toLowerCase().contains("ben")) {
                     String randc1 = RandomStringUtils.randomAlphabetic(6); String randc2 = RandomStringUtils.randomNumeric(6); String random = randc1 + randc2;
                     int randomMessage = (int) (Math.random() * 4);
                  // System.out.println("get ben");
@@ -33,8 +36,11 @@ public class ReceiveMessageMixin {
         }
         if (((ConfigBoolean) BenChatConfig.OPTIONS.get(7)).getBooleanValue()) {
             if (text.getString().startsWith(((ConfigString) BenChatConfig.OPTIONS.get(8)).getStringValue())) {
+                if (text.getString().toLowerCase().contains("~бен") || text.getString().toLowerCase().contains("~бэн") || text.getString().toLowerCase().contains("~ben")) {
+                    return;
+                }
                // System.out.println("get local");
-                if (text.getString().toLowerCase().contains("бен") || text.getString().toLowerCase().contains("бэн") || text.getString().toLowerCase().contains("ben")) {
+                else if (text.getString().toLowerCase().contains("бен") || text.getString().toLowerCase().contains("бэн") || text.getString().toLowerCase().contains("ben")) {
                     String randc1 = RandomStringUtils.randomAlphabetic(6); String randc2 = RandomStringUtils.randomNumeric(6); String random = randc1 + randc2;
                     int randomMessage = (int) (Math.random() * 4);
                    // System.out.println("get ben");
@@ -47,8 +53,11 @@ public class ReceiveMessageMixin {
         }
         if (((ConfigBoolean) BenChatConfig.OPTIONS.get(9)).getBooleanValue()) {
             if (text.getString().toLowerCase().startsWith(((ConfigString) BenChatConfig.OPTIONS.get(10)).getStringValue())) {
+                if (text.getString().toLowerCase().contains("~бен") || text.getString().toLowerCase().contains("~бэн") || text.getString().toLowerCase().contains("~ben")) {
+                    return;
+                }
                // System.out.println("get clan");
-                if (text.getString().toLowerCase().contains("бен") || text.getString().toLowerCase().contains("бэн") || text.getString().toLowerCase().contains("ben")) {
+                else if (text.getString().toLowerCase().contains("бен") || text.getString().toLowerCase().contains("бэн") || text.getString().toLowerCase().contains("ben")) {
                     String randc1 = RandomStringUtils.randomAlphabetic(6); String randc2 = RandomStringUtils.randomNumeric(6); String random = randc1 + randc2;
                     int randomMessage = (int) (Math.random() * 4);
                   // System.out.println("get ben");
@@ -64,8 +73,11 @@ public class ReceiveMessageMixin {
                 return;
             }
             else if (text.getString().toLowerCase().startsWith(((ConfigString) BenChatConfig.OPTIONS.get(12)).getStringValue())) {
+                if (text.getString().toLowerCase().contains("~бен") || text.getString().toLowerCase().contains("~бэн") || text.getString().toLowerCase().contains("~ben")) {
+                    return;
+                }
                 // System.out.println("get clan");
-                if (text.getString().toLowerCase().contains("бен") || text.getString().toLowerCase().contains("бэн") || text.getString().toLowerCase().contains("ben")) {
+                else if (text.getString().toLowerCase().contains("бен") || text.getString().toLowerCase().contains("бэн") || text.getString().toLowerCase().contains("ben")) {
                     String randc1 = RandomStringUtils.randomAlphabetic(6); String randc2 = RandomStringUtils.randomNumeric(6); String random = randc1 + randc2;
                     int randomMessage = (int) (Math.random() * 4);
                     String msg = text.getString();
