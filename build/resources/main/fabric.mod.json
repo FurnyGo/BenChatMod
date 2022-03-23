@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "benchat",
-  "version": "1.1.0",
+  "version": "1.2.1",
 
   "name": "BenChat",
   "description": "§lBen in minecraft chat bot",
@@ -32,7 +32,7 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.16.x"
+    "minecraft": "1.18.x"
   },
   "suggests": {
     "flamingo": "*"
