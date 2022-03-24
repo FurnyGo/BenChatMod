@@ -2,7 +2,7 @@
 ![image](https://user-images.githubusercontent.com/68079109/159576356-e4f35a3b-6777-4db6-a91f-057c8c74af88.png)  
 ## EN  
 BenChatMod - ChatBot for minecraft servers (client-side)  
-This mod has copy, anti-anti-spam, different chat channels functions:  
+This mod has anti-anti-spam, different chat channels functions:  
 ![image](https://user-images.githubusercontent.com/68079109/159914700-ebd5a274-7c2d-481a-b610-750e12e47277.png)  
 Original author of 50% code - https://github.com/HotLava03/chat-utils
 ## RU  
@@ -30,5 +30,5 @@ Press ESC, go to modmenu menu, choose this mod and press on settings button. Enj
 ## RU
 Нажмите ESC, перейдите в меню modmenu, выберите этот мод и нажмите кнопку настройки. Заходите на сервер и развлекайтесь
 
-### TODO: delete copy function (for compatibility), keybind to menu
+### TODO: keybind to menu
 ![image](https://user-images.githubusercontent.com/68079109/159686769-064ddc1a-7f80-4c04-980a-ea68ce4c048c.png)  
