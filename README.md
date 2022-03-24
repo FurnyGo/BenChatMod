@@ -1,5 +1,5 @@
 # BenChatMod (Talking Ben)
-![image](https://user-images.githubusercontent.com/68079109/159576356-e4f35a3b-6777-4db6-a91f-057c8c74af88.png)  
+![image](https://user-images.githubusercontent.com/68079109/159915991-a8931716-16e4-4347-a13a-72e4e1fc1735.png)  
 ## EN  
 BenChatMod - ChatBot for minecraft servers (client-side)  
 This mod has anti-anti-spam, different chat channels functions:  
