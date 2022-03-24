@@ -18,20 +18,33 @@ public class BenChatConfig implements IConfigHandler {
 
     private static ImmutableList<IConfigBase> getConfig() {
         return ImmutableList.of(
-                new ConfigString("copyMessage", Value.COPY_MESSAGE.getAsString(), "Message in the tooltip."),
-                new ConfigBoolean("copyPreview", Value.PREVIEW_CONTENT.getAsBoolean(), "Preview content in the tooltip."),
-                new ConfigBoolean("copyColors", Value.COPY_COLORS.getAsBoolean(), "Copy color codes or not."),
-                new ConfigBoolean("tooltipEnabled", Value.TOOLTIP_ENABLED.getAsBoolean(), "Click to disable any sort of overlay when hovering a message."),
-                new ConfigBoolean("enabled", Value.ENABLED.getAsBoolean(), "Enable?"),
                 new ConfigBoolean("globalChat", Value.GLOBAL_MODE.getAsBoolean(), "Global chat"),
-                new ConfigString("globalChatPrefix", Value.GLOBAL_PREFIX.getAsString(), "Clan chat prefix"),
+                new ConfigString("globalChatPrefix", Value.GLOBAL_PREFIX.getAsString(), "Global chat prefix"),
+                new ConfigString("globalChatCommand", Value.GLOBAL_COMMAND.getAsString(), "Global chat command"),
+                new ConfigBoolean("globalChatAntiAntiSpam", Value.GLOBAL_SPAM.getAsBoolean(), "Global chat antiantispam"),
+                new ConfigBoolean("globalChatColor", Value.GLOBAL_COLOR.getAsBoolean(), "Global chat color"),
+
+
                 new ConfigBoolean("localChat", Value.LOCAL_MODE.getAsBoolean(), "Local chat"),
-                new ConfigString("localChatPrefix", Value.LOCAL_PREFIX.getAsString(), "Clan chat prefix"),
+                new ConfigString("localChatPrefix", Value.LOCAL_PREFIX.getAsString(), "Local chat prefix"),
+                new ConfigString("localChatCommand", Value.LOCAL_COMMAND.getAsString(), "LOCAL chat command"),
+                new ConfigBoolean("localChatAntiAntiSpam", Value.LOCAL_SPAM.getAsBoolean(), "Local chat antiantispam"),
+                new ConfigBoolean("localChatColor", Value.LOCAL_COLOR.getAsBoolean(), "Local chat color"),
+
+
                 new ConfigBoolean("clanChat", Value.CLAN_MODE.getAsBoolean(), "Clan chat"),
                 new ConfigString("clanChatPrefix", Value.CLAN_PREFIX.getAsString(), "Clan chat prefix"),
+                new ConfigString("clanChatCommand", Value.CLAN_COMMAND.getAsString(), "Clan chat command"),
+                new ConfigBoolean("clanChatAntiAntiSpam", Value.CLAN_SPAM.getAsBoolean(), "Clan chat antiantispam"),
+                new ConfigBoolean("clanChatColor", Value.CLAN_COLOR.getAsBoolean(), "Clan chat color"),
+
+
                 new ConfigBoolean("privateChat", Value.PRIVATE_MODE.getAsBoolean(), "Private chat"),
                 new ConfigString("privateChatPrefix", Value.PRIVATE_PREFIX.getAsString(), "Private chat prefix"),
-                new ConfigString("privateChatArrow", Value.PRIVATE_ARROW.getAsString(), "Private chat arrow")
+                new ConfigString("privateChatArrow", Value.PRIVATE_ARROW.getAsString(), "Private chat arrow"),
+                new ConfigString("privateChatCommand", Value.PRIVATE_COMMAND.getAsString(), "Private chat command"),
+                new ConfigBoolean("privateChatAntiAntiSpam", Value.PRIVATE_SPAM.getAsBoolean(), "Private chat antiantispam"),
+                new ConfigBoolean("privateChatColor", Value.PRIVATE_COLOR.getAsBoolean(), "Private chat color")
         );
     }
 
@@ -68,30 +81,37 @@ public class BenChatConfig implements IConfigHandler {
         saveToFile();
     }
 
-    private static ImmutableList<String> rawPresets() {
+    /*private static ImmutableList<String> rawPresets() {
         ImmutableList.Builder<String> builder = ImmutableList.builder();
         return builder
                 .add(Value.COPY_MESSAGE.getAsString())
                 .add(Value.PREVIEW_CONTENT.getAsString())
                 .add(Value.ENABLED.getAsString())
                 .build();
-    }
+    }*/
 
     public enum Value {
-        COPY_MESSAGE("&9&lСкопировать текст"),
-        PREVIEW_CONTENT("true"),
-        COPY_COLORS("true"),
-        TOOLTIP_ENABLED("true"),
-        ENABLED("true"),
         GLOBAL_MODE("true"),
         GLOBAL_PREFIX("[ɢ]"),
+        GLOBAL_COMMAND("!"),
+        GLOBAL_SPAM("true"),
+        GLOBAL_COLOR("true"),
         LOCAL_MODE("true"),
         LOCAL_PREFIX("[ʟ]"),
+        LOCAL_COMMAND(""),
+        LOCAL_SPAM("true"),
+        LOCAL_COLOR("true"),
         CLAN_MODE("true"),
         CLAN_PREFIX("клан:"),
+        CLAN_COMMAND("/cc"),
+        CLAN_SPAM("false"),
+        CLAN_COLOR("false"),
         PRIVATE_MODE("true"),
         PRIVATE_PREFIX("| ["),
-        PRIVATE_ARROW("->");
+        PRIVATE_ARROW("->"),
+        PRIVATE_COMMAND("/tell"),
+        PRIVATE_SPAM("true"),
+        PRIVATE_COLOR("true");
 
 
         private final String value;
@@ -108,8 +128,8 @@ public class BenChatConfig implements IConfigHandler {
             return Boolean.parseBoolean(value);
         }
 
-        public double getAsDouble() {
+        /*public double getAsDouble() {
             return Double.parseDouble(value);
-        }
+        }*/
     }
 }

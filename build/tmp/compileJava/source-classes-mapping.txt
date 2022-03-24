@@ -5,11 +5,7 @@ furnygo/benchat/ModMenuApiImpl.java
  furnygo.benchat.ModMenuApiImpl
 furnygo/benchat/ConfigGui.java
  furnygo.benchat.ConfigGui
-net/md_5/bungee/api/ChatColor.java
- net.md_5.bungee.api.ChatColor
 furnygo/benchat/mixin/ReceiveMessageMixin.java
  furnygo.benchat.mixin.ReceiveMessageMixin
-furnygo/benchat/mixin/CopyToClipboardMixin.java
- furnygo.benchat.mixin.CopyToClipboardMixin
 furnygo/benchat/BenChatMod.java
  furnygo.benchat.BenChatMod
