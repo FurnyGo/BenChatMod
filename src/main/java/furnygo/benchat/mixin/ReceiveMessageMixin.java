@@ -19,6 +19,10 @@ public class ReceiveMessageMixin {
         String randc1 = RandomStringUtils.randomAlphabetic(6); String randc2 = RandomStringUtils.randomNumeric(6);
         String random = "";
         String color = "";
+        String hohoho = " Ho-Ho-Ho ";
+        String yes = " Yes ";
+        String no = " no ";
+        String ugh = " Ugh ";
         String Gprefix = ((ConfigString) BenChatConfig.OPTIONS.get(1)).getStringValue();
         String Lprefix = ((ConfigString) BenChatConfig.OPTIONS.get(6)).getStringValue();
         String Cprefix = ((ConfigString) BenChatConfig.OPTIONS.get(11)).getStringValue();
@@ -30,6 +34,13 @@ public class ReceiveMessageMixin {
         String Parrow = ((ConfigString) BenChatConfig.OPTIONS.get(17)).getStringValue();
         int randomMessage = (int) (Math.random() * 4);
         if (((ConfigBoolean) BenChatConfig.OPTIONS.get(0)).getBooleanValue()) {
+            if(!text.getString().toLowerCase().contains("ben")) {
+                hohoho = " Хо-Хо-Хо ";
+                yes = " Да ";
+                no = " Нет ";
+                ugh = " Фу ";
+            }
+
             if (text.getString().startsWith(Gprefix)) {
                 if (text.getString().toLowerCase().contains("~бен") || text.getString().toLowerCase().contains("~бэн") || text.getString().toLowerCase().contains("~ben")) {
                     return;
@@ -39,10 +50,10 @@ public class ReceiveMessageMixin {
                     if(((ConfigBoolean) BenChatConfig.OPTIONS.get(3)).getBooleanValue()) random = "["+randc1+randc2+"]";
                     if(((ConfigBoolean) BenChatConfig.OPTIONS.get(4)).getBooleanValue()) color = "&8";
                  // System.out.println("get ben"); Gprefix+"          "+color+random
-                    if (randomMessage == 0) try {MinecraftClient.getInstance().player.sendChatMessage(Gcommand+" Ho-Ho-Ho "+color+random);} catch (NullPointerException e){e.printStackTrace();}
-                    else if (randomMessage == 1) try {MinecraftClient.getInstance().player.sendChatMessage(Gcommand+" Yes "+color+random);} catch (NullPointerException e){e.printStackTrace();}
-                    else if (randomMessage == 2) try {MinecraftClient.getInstance().player.sendChatMessage(Gcommand+" No "+color+random);} catch (NullPointerException e){e.printStackTrace();}
-                    else if (randomMessage == 3) try {MinecraftClient.getInstance().player.sendChatMessage(Gcommand+" Ugh "+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    if (randomMessage == 0) try {MinecraftClient.getInstance().player.sendChatMessage(Gcommand+hohoho+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    else if (randomMessage == 1) try {MinecraftClient.getInstance().player.sendChatMessage(Gcommand+yes+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    else if (randomMessage == 2) try {MinecraftClient.getInstance().player.sendChatMessage(Gcommand+no+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    else if (randomMessage == 3) try {MinecraftClient.getInstance().player.sendChatMessage(Gcommand+ugh+color+random);} catch (NullPointerException e){e.printStackTrace();}
                 }
             }
         }
@@ -56,10 +67,10 @@ public class ReceiveMessageMixin {
                     if(((ConfigBoolean) BenChatConfig.OPTIONS.get(8)).getBooleanValue()) random = "["+randc1+randc2+"]";
                     if(((ConfigBoolean) BenChatConfig.OPTIONS.get(9)).getBooleanValue()) color = "&8";
                    // System.out.println("get ben");
-                    if (randomMessage == 0) try {MinecraftClient.getInstance().player.sendChatMessage(Lcommand+" Ho-Ho-Ho "+color+random);} catch (NullPointerException e){e.printStackTrace();}
-                    else if (randomMessage == 1) try {MinecraftClient.getInstance().player.sendChatMessage(Lcommand+" Yes "+color+random);} catch (NullPointerException e){e.printStackTrace();}
-                    else if (randomMessage == 2) try {MinecraftClient.getInstance().player.sendChatMessage(Lcommand+" No "+color+random);} catch (NullPointerException e){e.printStackTrace();}
-                    else if (randomMessage == 3) try {MinecraftClient.getInstance().player.sendChatMessage(Lcommand+" Ugh "+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    if (randomMessage == 0) try {MinecraftClient.getInstance().player.sendChatMessage(Lcommand+hohoho+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    else if (randomMessage == 1) try {MinecraftClient.getInstance().player.sendChatMessage(Lcommand+yes+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    else if (randomMessage == 2) try {MinecraftClient.getInstance().player.sendChatMessage(Lcommand+no+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    else if (randomMessage == 3) try {MinecraftClient.getInstance().player.sendChatMessage(Lcommand+ugh+color+random);} catch (NullPointerException e){e.printStackTrace();}
                 }
             }
         }
@@ -73,10 +84,10 @@ public class ReceiveMessageMixin {
                     if(((ConfigBoolean) BenChatConfig.OPTIONS.get(13)).getBooleanValue()) random = "["+randc1+randc2+"]";
                     if(((ConfigBoolean) BenChatConfig.OPTIONS.get(14)).getBooleanValue()) color = "&8";
                   // System.out.println("get ben");
-                    if (randomMessage == 0) try {MinecraftClient.getInstance().player.sendChatMessage(Ccommand+" Ho-Ho-Ho "+color+random);} catch (NullPointerException e){e.printStackTrace();}
-                    else if (randomMessage == 1) try {MinecraftClient.getInstance().player.sendChatMessage(Ccommand+" Yes "+color+random);} catch (NullPointerException e){e.printStackTrace();}
-                    else if (randomMessage == 2) try {MinecraftClient.getInstance().player.sendChatMessage(Ccommand+" No "+color+random);} catch (NullPointerException e){e.printStackTrace();}
-                    else if (randomMessage == 3) try {MinecraftClient.getInstance().player.sendChatMessage(Ccommand+" Ugh "+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    if (randomMessage == 0) try {MinecraftClient.getInstance().player.sendChatMessage(Ccommand+hohoho+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    else if (randomMessage == 1) try {MinecraftClient.getInstance().player.sendChatMessage(Ccommand+yes+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    else if (randomMessage == 2) try {MinecraftClient.getInstance().player.sendChatMessage(Ccommand+no+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    else if (randomMessage == 3) try {MinecraftClient.getInstance().player.sendChatMessage(Ccommand+ugh+color+random);} catch (NullPointerException e){e.printStackTrace();}
                 }
             }
         }
@@ -99,10 +110,10 @@ public class ReceiveMessageMixin {
                     String nick = msg.substring(startNick, endNick);
                     // System.out.println("get ben");
                     // System.out.println("Get nick: " + nick + " Get text: " + msg);
-                    if (randomMessage == 0) try {MinecraftClient.getInstance().player.sendChatMessage(Pcommand+" "+nick+" Ho-Ho-Ho "+color+random);} catch (NullPointerException e){e.printStackTrace();}
-                    else if (randomMessage == 1) try {MinecraftClient.getInstance().player.sendChatMessage(Pcommand+" "+nick+" Yes "+color+random);} catch (NullPointerException e){e.printStackTrace();}
-                    else if (randomMessage == 2) try {MinecraftClient.getInstance().player.sendChatMessage(Pcommand+" "+nick+" No "+color+random);} catch (NullPointerException e){e.printStackTrace();}
-                    else if (randomMessage == 3) try {MinecraftClient.getInstance().player.sendChatMessage(Pcommand+" "+nick+" Ugh "+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    if (randomMessage == 0) try {MinecraftClient.getInstance().player.sendChatMessage(Pcommand+" "+nick+hohoho+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    else if (randomMessage == 1) try {MinecraftClient.getInstance().player.sendChatMessage(Pcommand+" "+nick+yes+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    else if (randomMessage == 2) try {MinecraftClient.getInstance().player.sendChatMessage(Pcommand+" "+nick+no+color+random);} catch (NullPointerException e){e.printStackTrace();}
+                    else if (randomMessage == 3) try {MinecraftClient.getInstance().player.sendChatMessage(Pcommand+" "+nick+ugh+color+random);} catch (NullPointerException e){e.printStackTrace();}
                 }
             }
         }
